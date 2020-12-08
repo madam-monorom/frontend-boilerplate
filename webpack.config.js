@@ -33,7 +33,6 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
               sourceMap: devMode,
               importLoaders: 1,
             }
@@ -52,6 +51,17 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.(gif|ico|jpe?g|png|svg|webp)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            publicPath: 'assets',
+            outputPath: 'assets',
+            name: '[name].[hash:8].[ext]',
+          },
+        },
       }
       
     ]
