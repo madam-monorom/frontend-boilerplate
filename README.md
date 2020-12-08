@@ -1,2 +1,2 @@
 # frontend-boilerplate
-Simple Frontend Boilerplate
+A simple frontend boilerplate using ES6, Babel, Webpack and Sass
