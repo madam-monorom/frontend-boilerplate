@@ -54,14 +54,10 @@ module.exports = {
       },
       {
         test: /\.(gif|ico|jpe?g|png|svg|webp)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            publicPath: 'assets',
-            outputPath: 'assets',
-            name: '[name].[hash:8].[ext]',
-          },
-        },
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[hash][ext][query]'
+        }
       }
       
     ]
